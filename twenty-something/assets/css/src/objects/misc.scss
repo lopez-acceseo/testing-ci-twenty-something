@@ -1,0 +1,134 @@
+.show-on-mobile {
+    display: none !important;
+
+    @media only screen and (max-width: $mobile-breakpoint-min) {
+        display: block !important;
+    }
+}
+
+.format--underline {
+    text-decoration: underline !important;
+}
+
+.hover--efect {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.hover--opacity {
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.text-decoration__none {
+    a {
+        text-decoration: none;
+    }
+}
+
+.text--container-indexed {
+    z-index: 10;
+}
+
+.element--relative {
+    position: relative;
+}
+
+.text-to-left {
+    .elementor-container.elementor-column-gap-default {
+        @include acc_margins(right, 0, margin);
+
+        @media only screen and (max-width: $mobile-breakpoint-min) {
+            margin-left: auto !important;
+        }
+    }
+}
+
+.text-to-right {
+    .elementor-container.elementor-column-gap-default {
+        @include acc_margins(left, 0, margin);
+
+        @media only screen and (max-width: $mobile-breakpoint-min) {
+            margin-right: auto !important;
+        }
+    }
+}
+
+.white-link {
+    color: $blanco !important;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.display-none {
+    display: none;
+}
+
+.section__jcr {
+    .elementor-container {
+        justify-content: flex-end;
+    }
+}
+
+.text-color-main {
+    color: $principal;
+}
+
+.semi-bold {
+    font-weight: 600 !important;
+
+    span {
+        font-weight: 600 !important;
+    }
+}
+
+.medium-tablet {
+    p,
+    a,
+    .uagb-heading-text {
+        @media (max-width: $tablet-breakpoint-min) {
+            font-weight: $medium !important;
+        }
+    }
+}
+
+.medium-mobile {
+    p,
+    a,
+    .uagb-heading-text {
+        @media (max-width: $mobile-breakpoint-min) {
+            font-weight: $medium !important;
+        }
+    }
+}
+
+.wp-block-social-links {
+    font-size: 24px;
+    list-style: none;
+
+    svg {
+        height: 1.25em;
+        width: 1.25em;
+        transition: transform 0.1s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: row;
+
+    & > * {
+        display: flex;
+        flex: 1 1 50%;
+    }
+}

@@ -1,0 +1,27 @@
+/* Puntos de ruptura */
+$breakpoint-2k-max: 2620px;
+$breakpoint-2k-min: $breakpoint-2k-max - 1;
+$breakpoint-hd-max: 1980px;
+$breakpoint-hd-min: $breakpoint-hd-max - 1;
+$breakpoint-special-max: 1810px;
+$breakpoint-special-min: $breakpoint-special-max;
+$breakpoint-xlg-max: 1690px;
+$breakpoint-xlg-min: $breakpoint-xlg-max - 1;
+$breakpoint-nlg-max: 1580px;
+$breakpoint-nlg-min: $breakpoint-nlg-max - 1;
+$breakpoint-lg-max: 1504px;
+$breakpoint-lg-min: $breakpoint-lg-max - 1;
+$breakpoint-1440-max: 1440px;
+$breakpoint-1440-min: $breakpoint-1440-max - 1;
+$breakpoint-md-max: 1368px;
+$breakpoint-md-min: $breakpoint-md-max - 1;
+$breakpoint-sm-max: 1280px;
+$breakpoint-sm-min: $breakpoint-sm-max - 1;
+$tablet-breakpoint-max: 1025px;
+$tablet-breakpoint-min: $tablet-breakpoint-max - 1;
+$mobile-breakpoint-max: 768px;
+$mobile-breakpoint-min: $mobile-breakpoint-max - 1;
+$mobile-md-max: 520px;
+$mobile-md-min: $mobile-md-max - 1;
+$mobile-sm-max: 480px;
+$mobile-sm-min: $mobile-md-max - 1;

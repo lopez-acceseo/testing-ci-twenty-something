@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"customTemplates": [],
+	"settings": {
+		"spacing": {
+			"units": ["px", "em", "rem", "vh", "vw", "%"],
+			"margin": true,
+			"padding": true
+		},
+		"color": {
+			"palette": [
+				{
+					"slug": "contrast",
+					"color": "#000000",
+					"name": "contrast"
+				},
+				{
+					"slug": "base",
+					"color": "#ffffff",
+					"name": "base"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "867px",
+			"wideSize": "1504px"
+		}
+	},
+	"styles": {
+        "typography": {
+            "fontFamily": "var:preset|font-family|system-font",
+			"fontWeight": "400"
+        },
+		"color": {
+			"background": "var:preset|color|base"
+		}
+    }
+}

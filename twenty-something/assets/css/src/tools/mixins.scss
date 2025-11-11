@@ -1,0 +1,60 @@
+@mixin acc_margins($place, $margin, $type) {
+    #{$type}-#{$place}: #{$margin} !important;
+}
+
+@mixin acc_absolute_positions($place,$size) {
+    #{$place}: #{$size} !important;
+}
+
+@mixin acc_back_pos($coordinate, $value) {
+    background-position-#{$coordinate}: $value;
+}
+
+@mixin acc_back_blur($size){
+    -webkit-backdrop-filter: blur($size);
+    backdrop-filter: blur($size);
+}
+
+@mixin acc_background_gradient($from_color, $to_color) {
+    background-image: linear-gradient(to right, $from_color 0%, $to_color 51%, $from_color 100%);
+}
+
+@mixin acc_rotate($degrees, $ie_rotation) {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    filter: unquote("progid:DXImageTransform.Microsoft.BasicImage(rotation=$ie_rotation)");
+}
+
+@mixin acc_heights($height, $max: 0) {
+    height: $height;
+    @if $max==1 {
+        max-height: $height;
+    }
+}
+
+@mixin acc_custom_placeholders($color) {
+    &::placeholder {
+        color: $color;
+    }
+    &::-ms-input-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+@mixin fluid-type($min-font-size: 1rem, $max-font-size: 6rem, $lower-range: $tablet-breakpoint-max, $upper-range: $breakpoint-hd-min) {
+    font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))})) !important;
+
+    @media screen and (max-width: $lower-range) {
+        font-size: $min-font-size;
+    }
+
+    @media screen and (min-width: $upper-range){
+        font-size: $max-font-size;
+    }
+}

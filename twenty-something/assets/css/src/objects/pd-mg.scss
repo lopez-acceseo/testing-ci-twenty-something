@@ -1,0 +1,96 @@
+.m-b-40 {
+    @include acc_margins(bottom, 40px, margin);
+}
+
+.m-b-10 {
+    @include acc_margins(bottom, 10px, margin);
+}
+
+.m-b-5 {
+    @include acc_margins(bottom, 5px, margin);
+}
+
+.m-b-0 {
+    @include acc_margins(bottom, 0, margin);
+}
+
+.m-b-20 {
+    @include acc_margins(bottom, 20px, margin);
+}
+
+.m-b-50 {
+    @include acc_margins(bottom, 50px, margin);
+}
+
+.m-b-80 {
+    @include acc_margins(bottom, 80px, margin);
+}
+
+.m-b-100 {
+    @include acc_margins(bottom, 100px, margin);
+}
+
+.m-t-0 {
+    margin-block-start: 0 !important;
+    @include acc_margins(top, 0, margin);
+}
+
+.m-t-10 {
+    @include acc_margins(top, 10px, margin);
+}
+
+.m-t-20 {
+    @include acc_margins(top, 20px, margin);
+}
+
+.m-t-40 {
+    @include acc_margins(top, 40px, margin);
+}
+
+.m-t-60 {
+    @include acc_margins(top, 60px, margin);
+}
+
+.m-t-80 {
+    @include acc_margins(top, 80px, margin);
+}
+
+.m-t-100 {
+    @include acc_margins(top, 100px, margin);
+}
+
+.m-r-0 {
+    @include acc_margins(right, 0, margin);
+}
+
+.p-t-20 {
+    @include acc_margins(top, 20px, padding);
+}
+
+.p-t-80 {
+    @include acc_margins(top, 80px, padding);
+}
+
+.p-b-20 {
+    @include acc_margins(bottom, 20px, padding);
+}
+
+.p-b-80 {
+    @include acc_margins(bottom, 80px, padding);
+}
+
+.p-l-20 {
+    @include acc_margins(left, 20px, padding);
+}
+
+.p-r-20 {
+    @include acc_margins(right, 20px, padding);
+}
+
+.p-t-80-mob-0 {
+    @include acc_margins(top, 80px, padding);
+
+    @media (max-width: $tablet-breakpoint-min) {
+        @include acc_margins(top, 0, padding);
+    }
+}

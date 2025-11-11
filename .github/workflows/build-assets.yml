@@ -1,0 +1,46 @@
+name: Build and Test Assets
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build Assets
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache-dependency-path: twenty-something/package-lock.json
+          cache: 'npm'
+
+      - name: Install dependencies
+        working-directory: ./twenty-something
+        run: npm ci
+
+      - name: Build assets
+        working-directory: ./twenty-something
+        run: npm run build
+
+      - name: Check build status
+        working-directory: ./twenty-something
+        run: |
+            if [ ! -f assets/js/build/app.min.js ]; then
+                echo "❌ JS build failed"
+                exit 1
+            fi
+            if [ ! -f assets/css/build/main.min.css ]; then
+                echo "❌ CSS build failed"
+                exit 1
+            fi
+            if [ -f assets/js/build/app.min.js ] && [ -f assets/css/build/main.min.css ]; then
+                echo "✅ Artifacts generated successfully"
+            fi

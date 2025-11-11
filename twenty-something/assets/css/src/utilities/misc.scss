@@ -1,0 +1,17 @@
+.hide-desktop {
+    @media (min-width: $tablet-breakpoint-max) {
+        display: none !important;
+    }
+}
+
+.hide-tablet {
+    @media (max-width: $tablet-breakpoint-min) and (min-width: $mobile-breakpoint-max) {
+        display: none !important;
+    }
+}
+
+.hide-mobile {
+    @media (max-width: $mobile-breakpoint-min) {
+        display: none !important;
+    }
+}

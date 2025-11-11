@@ -1,0 +1,7 @@
+/* ELEMENTS: FOR BARE ELEMENTS (h1, h2, a, etc....) */
+p {
+    @media (max-width: $mobile-md-min) {
+        font-size: 1rem !important;
+        line-height: 22px;
+    }
+}

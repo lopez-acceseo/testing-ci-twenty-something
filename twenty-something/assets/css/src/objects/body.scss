@@ -1,0 +1,13 @@
+.wp-site-blocks {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.wp-site-blocks > * + * {
+    margin-block-start: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
